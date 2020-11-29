@@ -1,0 +1,153 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('Raleway/Raleway-VariableFont_wght.ttf');
+}
+body {
+	font-family: 'Raleway';
+	font-size: 1.5em;
+}
+
+#nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-weight: bold;
+}
+
+img[alt="Reservia"] {
+	float: left;
+	font-size: 200%;
+}
+
+.gras, h2, strong, ul {
+	font-weight: bold;
+}
+li {
+	font-weight: normal;
+	list-style: none;
+}
+
+#filtre{
+	display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-weight: bold;
+}
+input {
+	width: 200px;
+	height: 50px;
+	font-size: 0.9em;
+
+}
+li {
+	padding: 10px;
+}
+
+
+
+
+
+
+footer {
+	background-color: #F2F2F2;
+}
+
+#A, aside {    
+	background-color: #F2F2F2;
+	border: 3px #F2F2F2 solid;
+	border-radius: 30px;
+}
+
+span {
+	background-color: #FFFFFF;
+	border: 3px #FFFFFF solid;
+	border-radius: 30px;
+	padding: 5px;
+	box-shadow: 3px 3px 10px grey;
+}
+
+img {
+	border-radius: 30px;
+}
+
+#a, #c {
+	display: flex;
+	flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#wala {
+		display: flex;
+	flex-direction: row;
+}
+
+#b {
+	display: flex;
+	flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;	
+}
+
+footer {
+	display: flex;
+	flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+input {
+	background: #ffffff;
+    border: 3px #F2F2F2 solid;
+	border-radius: 30px;
+}
+ul i {
+	color: #0065FC;
+	background-color: #DEEBFF;
+	border: 3px #DEEBFF solid;
+	border-radius: 100px;
+	padding: 5px;
+
+}
+span i {
+	color: #0065FC;
+
+
+}
+p i {
+	color: #0065FC;
+    border: 3px #F2F2F2 solid;
+	border-radius: 100px;
+	padding: 5px 10px;
+
+
+}
+form i {
+ 	background-color: #F2F2F2;
+ 	border: 3px #F2F2F2 solid;
+ 		border-bottom-left-radius: 100px; 
+ 	border-top-left-radius: 100px;
+
+
+ }
+input[type="submit"] {
+ 	background: #0065FC;
+ 	border: #0065FC;
+ 	color: #ffffff;
+ 	border-bottom-left-radius: 0px; 
+ 	border-top-left-radius: 0px;
+ }
+a {
+	 text-decoration-line: none;
+}
+input[type="text"] {
+	border-radius: 0px;
+}
+
+
+
+
+@media all and (max-device-width: 480px)
