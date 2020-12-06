@@ -14,27 +14,30 @@
     	<nav>
             <img src="images/logo/Reservia.svg" alt="Reservia" />
     		<ul id="nav">
-    			<li><a href="#hebergement">Hépergement</a></li>
-    			<li><a href="#activites">Activités</a></li>
-    			<li><a href="">S'inscrire</a></li>
+    			<li><a href="#section_hebergement">Hébergement</a></li>
+    			<li><a href="#section_activites">Activités</a></li>
+    			<li><a href="" id="inscription">S'inscrire</a></li>
     		</ul>
     	</nav>
 
     	<header>
-    		<h1>Trouvez votre hébergement pour des vacances de rêve</h1>
+    		<h2>Trouvez votre hébergement pour des vacances de rêve</h2>
     		<p>En plein centre ville ou en plein nature</p>
-            <form method="post" action="" class="rechercher">
+            <form method="post" action="rechercher.php" class="rechercher">
                 <i class="fas fa-map-marker-alt"></i>
         		<input type="text" name="ville" placeholder="Rechercher" />
-        		<input type="submit" name="Rechercher" value="Rechercher" /> 
+        		<input type="submit" name="Rechercher" value="Rechercher" />
+                <i id="search_icone" class="fas fa-search"></i> 
             </form>
-            <p>Filtre</p>             	
-            <ul id="filtre">
-    			<li><button><i class="fas fa-money-bill-wave"></i> Economique</button></li>
-                <li><button><i class="fas fa-child"></i> Familial</button></li>
-                <li><button><i class="fas fa-heart"></i> Romantique</button></li>
-                <li><button><i class="fas fa-dog"></i> Animaux autorisés</button></li>
-    		</ul>
+            <div class="filtre">
+                <h3>Filtre</h3>         	
+                <ul id="filtre">
+        			<li><button><i class="fas fa-money-bill-wave"></i> Economique</button></li>
+                    <li><button><i class="fas fa-child"></i> Familial</button></li>
+                    <li><button><i class="fas fa-heart"></i> Romantique</button></li>
+                    <li><button><i class="fas fa-dog"></i> Animaux autorisés</button></li>
+        		</ul>
+            </div>
     		<p><i class="fas fa-info"></i> Plus de 500 logements sont disponobles dans cette ville</p>
     	</header>
 
@@ -142,22 +145,28 @@
 
 
     	<footer>
-            <h3>A propos</h3>
-    		<ul>
-    			<li>Fonctionnement du site</li>
-    			<li>Conditions générales de vente</li>
-    			<li>Données et confidentialités</li>
-    		</ul>
-            <h3>Nos hébergements</h3>
-    		<ul>
-    			<li>Charte qualité</li>
-    			<li>Soumettre votre hôtel</li>
-    		</ul>
-            <h3>Assistance</h3>
-    		<ul>
-    			<li>Centre d'aide</li>
-    			<li>Nous contacter</li>
-    		</ul>
+            <div>
+                <h3>A propos</h3>
+        		<ul>
+        			<li>Fonctionnement du site</li>
+        			<li>Conditions générales de vente</li>
+        			<li>Données et confidentialités</li>
+        		</ul>
+            </div>
+            <div>
+                <h3>Nos hébergements</h3>
+        		<ul> 
+        			<li>Charte qualité</li>
+        			<li>Soumettre votre hôtel</li>
+        		</ul>
+            </div>
+            <div>
+                <h3>Assistance</h3>
+        		<ul>
+        			<li>Centre d'aide</li>
+        			<li>Nous contacter</li>
+        		</ul>
+            </div>
     	</footer>
 
     </body>
