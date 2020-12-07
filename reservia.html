@@ -23,15 +23,15 @@
     	<header>
     		<h2>Trouvez votre hébergement pour des vacances de rêve</h2>
     		<p>En plein centre ville ou en plein nature</p>
-            <form method="post" action="rechercher.php" class="rechercher">
+            <form method="post" action="rechercher.php" id="rechercher">
                 <i class="fas fa-map-marker-alt"></i>
         		<input type="text" name="ville" placeholder="Rechercher" />
         		<input type="submit" name="Rechercher" value="Rechercher" />
                 <i id="search_icone" class="fas fa-search"></i> 
             </form>
-            <div class="filtre">
+            <div id="filtre">
                 <h3>Filtre</h3>         	
-                <ul id="filtre">
+                <ul id="button_filtre">
         			<li><button><i class="fas fa-money-bill-wave"></i> Economique</button></li>
                     <li><button><i class="fas fa-child"></i> Familial</button></li>
                     <li><button><i class="fas fa-heart"></i> Romantique</button></li>
@@ -83,7 +83,7 @@
                         <div><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
                     </article>
                 </div>
-                <a href="affichage.com">Afficher plus</a>
+                <span><a href="affichage.com">Afficher plus</a></span>
             </section>
 
             <aside >
@@ -146,7 +146,7 @@
 
     	<footer>
             <div>
-                <h3>A propos</h3>
+                <h2>A propos</h2>
         		<ul>
         			<li>Fonctionnement du site</li>
         			<li>Conditions générales de vente</li>
@@ -154,14 +154,14 @@
         		</ul>
             </div>
             <div>
-                <h3>Nos hébergements</h3>
+                <h2>Nos hébergements</h2>
         		<ul> 
         			<li>Charte qualité</li>
         			<li>Soumettre votre hôtel</li>
         		</ul>
             </div>
             <div>
-                <h3>Assistance</h3>
+                <h2>Assistance</h2>
         		<ul>
         			<li>Centre d'aide</li>
         			<li>Nous contacter</li>
