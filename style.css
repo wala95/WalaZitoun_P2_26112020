@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'Raleway';
     src: url('Raleway/Raleway-VariableFont_wght.ttf');
@@ -6,46 +7,54 @@ body {
 	display: grid;
 	grid-column: 1fr 1fr 1fr 1fr 1fr;
 	font-family: 'Raleway';
-	font-size: 15px;
-	margin: 0;
+	font-size: 16px;
 }
 
-nav, header, section, aside {
-	margin: 20px;
+body{
+    margin: 0;
+    padding: 0;
 }
 
-h2, h3, span {
-	font-weight: bold;
+h1, h2, h3, span {
+	font-weight: 1000;
 }
-
-img[alt="Reservia"] {
-	float: left;
-}
-
-#nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
 a {
 	 text-decoration-line: none;
 	 color: black;
 }
 
-nav a {
-	padding: 15px;
-	border-top: 1px #F2F2F2 solid;
+
+nav {
+	margin: 50px 50px 0 50px;
 }
-nav a:hover {
-	color: #0065FC;
-	border-top: 1px #0065FC solid;
+img[alt="Reservia"] {
+	float: left;
+}
+#nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 #inscription {
 	color: #0065FC;
-	font-weight: bold;
+	font-weight: bolder;
+}
+#ancre a {
+	margin-right: 50px;
+}
+#ancre a:hover {
+	color: #0065FC;
+	padding-top: 48px;
+	border-top: 2px #0065FC solid;
 }
 
+
+header {
+	margin: 50px 50px 0 50px;
+}
+h1 {
+	margin: 0;
+}
 #rechercher {
 	display: flex;
   	flex-direction: row;
@@ -58,68 +67,90 @@ form i {
  	border: 2px #F2F2F2 solid;
  	border-bottom-left-radius: 10px; 
  	border-top-left-radius: 10px;
- 	padding: 8px;
+ 	padding: 15px;
 }
-
+::placeholder {
+	font-weight: bolder;
+	color: black;
+}
 input[type="text"] {
 	border: 1px #F2F2F2 solid;
 	border-radius: 0px;
+	padding: 16px;
 }
-
 input[type="submit"] {
  	background: #0065FC;
  	border: 1px #0065FC solid;
  	color: #ffffff;
  	border-bottom-right-radius: 10px; 
  	border-top-right-radius: 10px;
+ 	padding: 15px;
 }
-
+#filtre h3 {
+	padding-right: 30px;
+}
 #filtre {
 	display: flex;
 	flex-direction: row;
-	padding-top: 20px;
+	align-items: center;
+	padding-top: 15px;
 }
-
 #button_filtre{
 	display: flex;
     flex-direction: row;
-    margin: 10px;
 }
-
 li {
 	list-style: none;
-	margin-bottom: 10px; 
 }
-
 button {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
 	background: #ffffff;
-    border: 3px #F2F2F2 solid;
-	border-radius: 30px;
-	padding-left: 0px;
-	margin: 5px;
+    border: 2px #F2F2F2 solid;
+	border-radius: 100px;
+	padding-left: 0;
+	padding-right: 20px;
+	margin-right: 20px;
 	font-weight: bold;
 }
-
 button i {
+	font-size: 27px;
 	float: left;
 	color: #0065FC;
 	background-color: #DEEBFF;
 	border: 3px #DEEBFF solid;
 	border-radius: 100px;
-	margin-right: 10px;
-	margin-top: 0;
+	padding: 5px;
+	margin-right: 15px;
+	transform: scale(1.05);
 }
-
 button:hover {
 	background-color: #F2F2F2;
+	cursor: grab;
 }
 
+
+section {
+	margin: 25px 50px 0 50px;
+}
+#section_hebergement {
+	padding: 27px 40px 22px 40px;
+}
+aside {
+	margin: 25px 50px 0 0;
+		padding: 27px 30px 30px 30px;
+}
+#plus {
+	margin-top: 40px;
+}
 p i {
 	color: #0065FC;
     border: 3px #F2F2F2 solid;
 	border-radius: 100px;
 	padding: 5px 10px;
 }
+
 
 article i {
 	color: #0065FC;
@@ -131,32 +162,35 @@ h2 i {
 
 #block_hebergement_populaire {
 	display: grid;	
-	grid-template-columns: 69% 30%;	
+	grid-template-columns: 70% 30%;	
 }
 
 #section_hebergement , aside {    
 	background-color: #F2F2F2;
 	border: 2px #F2F2F2 solid;
 	border-radius: 30px;
-	padding: 20px;
 }
 
 #hebergement {
 	display: grid;	
-	grid-template-columns: 32% 32% 32%;
-	grid-column-gap: 20px;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-column-gap: 30px;
+	grid-row-gap: 30px;
 }
 
 #populaires {
 	display: grid;
-	grid-auto-flow: row;	
+	grid-auto-flow: row;
+	grid-row-gap: 30px;
+
 }
 
 #activites {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
-	grid-column-gap: 20px;
+	grid-column-gap: 40px;
+	grid-row-gap: 40px;
 }
 .vieux_port {
 	grid-column: 1 ;
@@ -165,6 +199,11 @@ h2 i {
 .parc_national {
 	grid-column: 3 ;
 	grid-row: 1/ span 2;
+}
+
+#activites img {
+	transform: scale(1.03);
+	margin-top: -2px;
 }
 section article {
 	display: flex;
@@ -185,7 +224,6 @@ aside article {
 	border-radius: 20px;
 	padding: 2px;
 	box-shadow: 3px 3px 7px silver;
-	margin-bottom: 20px;
 }
 
 article img {
@@ -207,17 +245,21 @@ aside img {
 }
 
 .vieux_port img {
-	height: 450px;
+	height: 470px;
 }
 .parc_national img {
-	height: 450px;
+	height: 470px;
 }
 
 footer {
 	background-color: #F2F2F2;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr ;
-	padding-left: 20px;
+	padding: 22px 50px 50px 50px;
+	margin-top: 50px;
+}
+footer li {
+	padding: 7px 0 7px 0;
 }
 
 ul {
@@ -225,9 +267,13 @@ ul {
 }
 
 
-#activites img {
-	transform: scale(1.03);
-	margin-top: -2px;
+aside p {
+	margin-top: 0;
+	margin-bottom: 55px;
+}
+#hebergement h3  {
+	margin-top: 10px;
+	margin-bottom: 0;
 }
 
 @media screen and (max-width: 1199px) {
@@ -242,6 +288,7 @@ ul {
 	}
 	aside {
 		grid-area: test2;
+		margin-left: 50px;
 	}
 	#populaires, #activites {
 		display: grid;	
@@ -260,13 +307,28 @@ ul {
 	}
 	
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
 
 	#nav {
 		display: flex;
 		flex-wrap: wrap-reverse;
-
 	}
+
+	#ancre {
+		display: flex;
+		flex-direction: row;
+	}
+	#ancre a {
+		margin: 0px;
+		text-align: center;
+		padding: 55px 20px 10px 20px;		
+	}
+	#ancre a:hover {
+		border-top: none;
+		color: #0065FC;
+		border-bottom: 2px #0065FC solid;
+	}
+
 	#hebergement, #populaires, #activites {
 		display: block;
 	}
@@ -279,6 +341,11 @@ ul {
 		background-color: #FFFFFF;
 		border: none;
 		padding: 0;
+	}
+	nav {
+		margin: 0;
+		padding: 30px 20px 0px 20px ;
+		border-bottom: 2px #F2F2F2 solid;
 	}
 
 	aside {
@@ -296,9 +363,6 @@ ul {
 		padding-top: 20px;
 	}
 
-	nav a {
-		border-top: none;
-	}
 	input[type="submit"] {
 		display: none;
 	}
@@ -307,9 +371,43 @@ ul {
 		background: #0065FC;
 	 	border: 1px #0065FC solid;
 	 	color: #ffffff;
-	 	border-radius: 0 10px 10px 0; 
+	 	border-radius: 10px 10px 10px 10px; 
+	}
+	button {
+			margin-bottom: 10px;
 	}
 
+	aside article {
+		margin-bottom: 10px;
+	}
+	
+	header {
+		margin: 35px 0 25px 20px;
+	}
+	#plus i {
+	float: left;
+	margin-right: 10px;
+
+	}
+	aside {
+		padding: 22px 20px 30px 20px;
+	}	
+	#section_hebergement {
+		margin: 22px 20px 0 20px;
+	}
+	aside p {
+		margin-bottom: 20px;
+	}
+	#section_activites {
+		margin: 22px 20px 0 20px;
+	}
+	footer {
+		margin-top: 25px;	
+		padding-left: 30px;
+	}
+	h1 {
+		font-size: 25px;
+	}
 }
 
 
