@@ -1,17 +1,23 @@
 
+/*--------------------------balises générales---------------------------*/
+
+:root {
+	--background: #F2F2F2;
+	--icone: #0065FC;
+	--background_icone: #DEEBFF;
+}
+	
 @font-face {
     font-family: 'Raleway';
     src: url('Raleway/Raleway-VariableFont_wght.ttf');
 }
+
 body {
 	display: grid;
 	grid-column: 1fr 1fr 1fr 1fr 1fr;
 	font-family: 'Raleway';
 	font-size: 16px;
-}
-
-body{
-    margin: 0;
+	margin: 0;
     padding: 0;
 }
 
@@ -19,10 +25,19 @@ h1, h2, h3, span {
 	font-weight: 1000;
 }
 a {
-	 text-decoration-line: none;
-	 color: black;
+	text-decoration-line: none;
+	color: black;
+}
+ul {
+	padding-left: 0px;
+}
+li {
+	list-style: none;
 }
 
+
+
+/*--------------------------------nav------------------------------------*/
 
 nav {
 	margin: 50px 50px 0 50px;
@@ -36,18 +51,21 @@ img[alt="Reservia"] {
     justify-content: flex-end;
 }
 #inscription {
-	color: #0065FC;
+	color: #F2F2F2;
 	font-weight: bolder;
 }
 #ancre a {
 	margin-right: 50px;
 }
 #ancre a:hover {
-	color: #0065FC;
+	color: var(--icone);
 	padding-top: 48px;
-	border-top: 2px #0065FC solid;
+	border-top: 2px var(--icone) solid;
 }
 
+
+
+/*--------------------------------header-------------------------------*/
 
 header {
 	margin: 50px 50px 0 50px;
@@ -63,24 +81,23 @@ h1 {
 	display: none;
 }
 form i {
- 	background-color: #F2F2F2;
- 	border: 2px #F2F2F2 solid;
+ 	background-color: var(--background);
  	border-bottom-left-radius: 10px; 
  	border-top-left-radius: 10px;
  	padding: 15px;
+}
+input[type="text"] {
+	border: 1px var(--background) solid;
+	border-radius: 0px;	
+	padding: 15px;
 }
 ::placeholder {
 	font-weight: bolder;
 	color: black;
 }
-input[type="text"] {
-	border: 1px #F2F2F2 solid;
-	border-radius: 0px;
-	padding: 16px;
-}
 input[type="submit"] {
- 	background: #0065FC;
- 	border: 1px #0065FC solid;
+ 	background: var(--icone);
+ 	border: 1px var(--icone) solid;
  	color: #ffffff;
  	border-bottom-right-radius: 10px; 
  	border-top-right-radius: 10px;
@@ -95,19 +112,16 @@ input[type="submit"] {
 	align-items: center;
 	padding-top: 15px;
 }
-#button_filtre{
+#button_filtre {
 	display: flex;
     flex-direction: row;
-}
-li {
-	list-style: none;
 }
 button {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	background: #ffffff;
-    border: 2px #F2F2F2 solid;
+    border: 2px var(--background) solid;
 	border-radius: 100px;
 	padding-left: 0;
 	padding-right: 20px;
@@ -117,20 +131,33 @@ button {
 button i {
 	font-size: 27px;
 	float: left;
-	color: #0065FC;
-	background-color: #DEEBFF;
-	border: 3px #DEEBFF solid;
+	color: var(--icone);
+	background-color: var(--background_icone);
+	border: 3px var(--background_icone) solid;
 	border-radius: 100px;
 	padding: 5px;
 	margin-right: 15px;
 	transform: scale(1.05);
 }
 button:hover {
-	background-color: #F2F2F2;
+	background-color: var(--background);
 	cursor: grab;
+}
+p i {
+	color: var(--icone);
+    border: 3px var(--background) solid;
+	border-radius: 100px;
+	padding: 5px 10px;
 }
 
 
+
+/*------------------------------section--------------------------*/
+
+#block_hebergement_populaire {
+	display: grid;	
+	grid-template-columns: 70% 30%;	
+}
 section {
 	margin: 25px 50px 0 50px;
 }
@@ -139,52 +166,24 @@ section {
 }
 aside {
 	margin: 25px 50px 0 0;
-		padding: 27px 30px 30px 30px;
+	padding: 27px 30px 30px 30px;
 }
-#plus {
-	margin-top: 40px;
-}
-p i {
-	color: #0065FC;
-    border: 3px #F2F2F2 solid;
-	border-radius: 100px;
-	padding: 5px 10px;
-}
-
-
-article i {
-	color: #0065FC;
-}
-
-h2 i {
-	float: right;
-}
-
-#block_hebergement_populaire {
-	display: grid;	
-	grid-template-columns: 70% 30%;	
-}
-
-#section_hebergement , aside {    
-	background-color: #F2F2F2;
-	border: 2px #F2F2F2 solid;
+#section_hebergement, aside {    
+	background-color: var(--background);
+	border: 2px var(--background) solid;
 	border-radius: 30px;
 }
-
 #hebergement {
 	display: grid;	
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-column-gap: 30px;
 	grid-row-gap: 30px;
 }
-
 #populaires {
 	display: grid;
 	grid-auto-flow: row;
 	grid-row-gap: 30px;
-
 }
-
 #activites {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -201,10 +200,6 @@ h2 i {
 	grid-row: 1/ span 2;
 }
 
-#activites img {
-	transform: scale(1.03);
-	margin-top: -4px;
-}
 section article {
 	display: flex;
 	flex-direction: column;
@@ -236,14 +231,16 @@ article img {
 #hebergement img {
 	height: 130px;
 }
-
 aside img {
 	width: 40%;
 	float: left;
 	border-radius: 20px 0 0 20px;
 	margin-right: 15px;
 }
-
+#activites img {
+	transform: scale(1.03);
+	margin-top: -4px;
+}
 .vieux_port img {
 	height: 470px;
 }
@@ -251,8 +248,32 @@ aside img {
 	height: 470px;
 }
 
+#hebergement h3  {
+	margin-top: 10px;
+	margin-bottom: 0;
+}
+aside p {
+	margin-top: 0;
+	margin-bottom: 55px;
+}
+
+h2 i {
+	float: right;
+}
+article i {
+	color: var(--icone);
+}
+
+#plus {
+	margin-top: 40px;
+}
+
+
+
+/*------------------------------footer--------------------------------*/
+
 footer {
-	background-color: #F2F2F2;
+	background-color: var(--background);
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr ;
 	padding: 22px 50px 50px 50px;
@@ -262,21 +283,12 @@ footer li {
 	padding: 7px 0 7px 0;
 }
 
-ul {
-	padding-left: 0px;
-}
 
 
-aside p {
-	margin-top: 0;
-	margin-bottom: 55px;
-}
-#hebergement h3  {
-	margin-top: 10px;
-	margin-bottom: 0;
-}
+/*---------------------------responsive-------------------------------*/
 
 @media screen and (max-width: 1199px) {
+
 	#block_hebergement_populaire {
 		grid-template-columns: 1fr;
 		grid-template-areas: 
@@ -295,71 +307,61 @@ aside p {
 		grid-template-columns: 32% 32% 32%;
 		grid-column-gap: 20px;
 	}
-	.vieux_port, .parc_national{
-		grid-row: 1;
-	}
-	
 	#populaires img {
 		height: 200px;
 	}
 	#hebergement img, #activites img {
 		height: 150px;
 	}
-
+	.vieux_port, .parc_national{
+		grid-row: 1;
+	}
 }
 
+
 @media screen and (max-width: 850px) {
-
-
-	#hebergement, #populaires, #activites {
-		display: block;
-	}
-	#button_filtre, #filtre {
-		flex-wrap: wrap;
-		margin: 0;
-	}
-	#section_hebergement {
-		background-color: #FFFFFF;
-		border: none;
-		padding: 0;
-	}
+	
 	nav {
 		margin: 0;
-		padding: 30px 20px 0px 20px ;
-		
-	}
-	#activites img {
-	transform: scale(1.015);
-	}
-	aside {
-		border-radius: 0;
-		margin: 0;
-	}
-	footer {
-		display: block;
-		padding-top: 20px;
+		padding: 30px 20px 0px 20px ;	
 	}
 
+
+
+	header {
+		margin: 35px 0 25px 20px;
+	}
+	h1 {
+		font-size: 25px;
+	}
 	input[type="submit"] {
 		display: none;
 	}
 	#search_icone {
 		display: block;
-		background: #0065FC;
-	 	border: 1px #0065FC solid;
+		background: var(--icone);
+	 	border: 1px var(--icone) solid;
 	 	color: #ffffff;
 	 	border-radius: 10px 10px 10px 10px; 
 	}
 	button {
-			margin-bottom: 10px;
-	}
-
-	aside article {
 		margin-bottom: 10px;
 	}
+	#button_filtre, #filtre {
+		flex-wrap: wrap;
+		margin: 0;
+	}
 	
-	header {
-		margin: 35px 0 25px 20px;
+
+
+	#hebergement, #populaires, #activites {
+		display: block;
+	}
+	#section_hebergement {
+		background-color: #FFFFFF;
+		border: none;
+		padding: 0;
+		margin: 22px 20px 0 20px;
 	}
 	#plus i {
 	float: left;
@@ -367,10 +369,12 @@ aside p {
 
 	}
 	aside {
+		border-radius: 0;
+		margin: 0;
 		padding: 22px 20px 30px 20px;
-	}	
-	#section_hebergement {
-		margin: 22px 20px 0 20px;
+	}
+	aside article {
+		margin-bottom: 10px;
 	}
 	aside p {
 		margin-bottom: 20px;
@@ -378,16 +382,53 @@ aside p {
 	#section_activites {
 		margin: 22px 20px 0 20px;
 	}
+	#activites img {
+	transform: scale(1.015);
+	}
+	
+
+
 	footer {
+		display: block;
+		padding-top: 20px;
 		margin-top: 25px;	
 		padding-left: 30px;
-	}
-	h1 {
-		font-size: 25px;
-	}
+	}		
 }
 
+
 @media screen and (max-width: 550px) {
+
+	nav {
+		border-bottom: 2px var(--background) solid;
+	}
+	#nav {
+		display: flex;
+		flex-wrap: wrap-reverse;
+	}
+	#ancre {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	#ancre a:hover {
+		padding-top: 0;
+		border-top: none;
+		color: var(--icone);
+		border-bottom: 2px var(--icone) solid;
+		margin-bottom: 0;
+	}
+	#inscription {
+		margin-top: 15px;
+	}	
+	#nav_hebergement {
+		margin: 0;
+		margin:  55px 15% 10px 15%;
+	}
+	#nav_activites {
+		margin: 0;
+		margin: 55px 15% 10px 15%;
+	}
+
 
 	#populaires img {
 		height: 130px;
@@ -397,42 +438,6 @@ aside p {
 	}
 	#activites img {
 	transform: scale(1.03);
-	}
-
-
-	#ancre {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-
-	}
-	#nav {
-		display: flex;
-		flex-wrap: wrap-reverse;
-	}
-	#inscription {
-		margin-top: 15px;
-	}
-
-	nav {
-		border-bottom: 2px #F2F2F2 solid;
-	}
-	
-	#nav_hebergement {
-		margin: 0;
-		margin:  55px 15% 10px 15%;
-	}
-	#nav_activites {
-		margin: 0;
-		margin: 55px 15% 10px 15%;
-	}
-	#ancre a:hover {
-		padding-top: 0;
-		border-top: none;
-
-		color: #0065FC;
-		border-bottom: 2px #0065FC solid;
-		margin-bottom: 0;
-	
 	}
 }
 
