@@ -81,15 +81,16 @@ h1 {
 	display: none;
 }
 form i {
+	font-size: 16px;
  	background-color: var(--background);
  	border-bottom-left-radius: 10px; 
  	border-top-left-radius: 10px;
- 	padding: 15px;
+ 	padding: 20px;
 }
 input[type="text"] {
 	border: 1px var(--background) solid;
 	border-radius: 0px;	
-	padding: 15px;
+	padding: 20px;
 }
 ::placeholder {
 	font-weight: bolder;
@@ -135,8 +136,8 @@ button i {
 	background-color: var(--background_icone);
 	border: 3px var(--background_icone) solid;
 	border-radius: 100px;
-	padding: 10px;
-	margin-right: 15px;
+	padding: 12px;
+	margin-right: 20px;
 	transform: scale(1.05);
 }
 button:hover {
@@ -156,7 +157,7 @@ p i {
 
 #block_hebergement_populaire {
 	display: grid;	
-	grid-template-columns: 70% 30%;	
+	grid-template-columns: 68% 32%;	
 }
 section {
 	margin: 40px 50px 0 50px;
