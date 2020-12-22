@@ -39,13 +39,11 @@ li {
 
 /*--------------------------------nav------------------------------------*/
 
-nav {
-	margin: 0 50px 0 50px;
-}
 
 nav {
     display: grid;
-    grid-template-columns: 7fr 1fr 1fr 1fr;
+    grid-template-columns: 7.4fr 1fr 1fr 0.6fr;
+    margin: 0 50px 0 50px;
 }
 nav a {
 		padding-top: 50px;
@@ -55,18 +53,17 @@ img[alt="Reservia"] {
 
 }
 #inscription {
+	justify-self:end;
 	color: #0065FC;
 	font-weight: bolder;
-	justify-self: end;
-
 }
 #nav_hebergement  {
-	justify-self: end;
-
+	text-align: center;
+	width: 10vw;
 }
 #nav_activites {
-	justify-self: end;
-
+	text-align: center;
+	width: 10vw;
 }
 #nav_hebergement:hover {
 	color: var(--icone);
@@ -102,9 +99,8 @@ form i {
  	padding: 20px;
 }
 input[type="text"] {
-	border: 1px var(--background) solid;
-	border-radius: 0px;	
-	padding: 20px 60px 20px 20px ;
+	border: 1px var(--background) solid;	
+	padding: 20px 60px 20px 20px;
 }
 ::placeholder {
 	font-weight: bolder;
@@ -301,9 +297,6 @@ aside h3 {
 #hebergement p {
 	margin: 10px 0 10px 10px;
 }
-/*aside p {
-	margin: 10px 0 40px 0;
-}*/	
 #hebergement div {
 	margin-left: 10px;
 }
@@ -317,7 +310,6 @@ article i {
 .etoile_vide {
 	color: #DBDBDB;
 }
-
 #plus {
 	margin-top: 40px;
 }
@@ -363,14 +355,14 @@ footer li {
 	.fiche_hotel {
 	margin-right: 5px;
 	}	
+	.fiche_technique {
+		margin-right: 2px;
+	}
 	#activites img {
 		height: 135px;
 	}
 	#vieux_port, #parc_national{
 		grid-row: 1;
-	}
-	.fiche_technique {
-		margin-right: 2px;
 	}
 	#ile_frioul {
 		margin-top: 0;
@@ -381,17 +373,14 @@ footer li {
 
 @media screen and (max-width: 975px) {
 	
-	nav {
-		margin: 0;
-		padding: 30px 20px 0px 20px ;	
-	}
+
 	img[alt="Reservia"] {
 		float: none;
+		padding: 30px 0 0 20px;
 	}
 	nav {
-		border-bottom: 2px var(--background) solid;
-	}
-	nav {
+		padding: 0;
+		margin: 0;
 		display: grid;
 		grid-template-rows: 1fr 1fr;
 		grid-template-columns: 1fr 1fr;
@@ -404,19 +393,23 @@ footer li {
 	#inscription {
 		grid-area: b;
 		justify-self: end;
-		margin-top: 15px;
+		margin: 30px 20px 0 0;
 	}
 	#nav_hebergement {
 		justify-self: center;
 		align-self: end;
-		padding-bottom: 15px; 
-
+		padding: 0 0px 15px 0px; 
+		width: 50vw;
+		text-align: center;
+		border-bottom: 2px var(--background) solid;
 	}
 	#nav_activites {
 		justify-self: center;
 		align-self: end;
-		padding-bottom: 15px;
-
+		padding:0 0px 15px 0px;
+		width: 50vw;
+		text-align: center;
+		border-bottom: 2px var(--background) solid;
 	}
 	#nav_hebergement:hover {
 		border-top: none;
@@ -443,7 +436,11 @@ footer li {
 	}
 	form a {
 		display: block;
-	}	
+	}
+	input[type="text"] {
+		padding: 20px;
+		width: 43vw;
+	}
 	.search_icone {
 		position: absolute;
 		transform: translate(-25%,1%);
@@ -459,7 +456,6 @@ footer li {
 		margin: 0;
 	}
 	
-
 
 	#populaires {
 		display: block;
@@ -501,9 +497,6 @@ footer li {
 	#section_activites {
 		margin: 22px 20px 0 20px;
 	}
-
-	
-	
 
 
 	footer {
